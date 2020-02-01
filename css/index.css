@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Arsenal';
+    src: url('Arsenal-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Sans';
+    src: url('SourceSansPro-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Alatsi';
+    src: url('Alatsi-Regular.ttf');
+}
+
+body{
+    margin: 0;
+    background: rgb(32, 32, 32);
+    border: none;
+    font-family: 'Arsenal';
+    color: rgb(252, 252, 252);
+}
+
+/*header*/
+
+p.blog-title {
+    font-family: 'Sans';
+}
+
+#myVideo {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: -1;
+}
