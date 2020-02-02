@@ -23,8 +23,13 @@ body{
 
 /*header*/
 
-p.blog-title {
+body blog-title {
     font-family: 'Sans';
+    font-size: 50px;
+}
+body blog-tagline {
+    font-family: 'Alatsi';
+    font-size: 30px;
 }
 
 #myVideo {
