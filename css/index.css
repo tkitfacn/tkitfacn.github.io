@@ -15,7 +15,7 @@
 
 body{
     margin: 0;
-    background: rgb(32, 32, 32);
+    background: rgb(32, 32, 32); /*32 32 32*/
     border: none;
     font-family: 'Arsenal';
     color: rgb(252, 252, 252);
@@ -38,4 +38,135 @@ body blog-tagline {
     height: auto;
     overflow: hidden;
     z-index: -1;
+}
+
+#myContent {
+
+}
+
+ /*light*/
+.light_content{
+    width: 100%;
+    background: rgb(235, 234, 240);
+}
+
+.light_content #my_container{
+    width: 1000px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.light_content #my_container > div {
+    position: relative;
+}
+
+.light_content #laptop_scroll {
+    float: left;
+    width: 600px;
+    height: 400px;
+    background-repeat: no-repeat;
+}
+
+.light_content #phone_scroll {
+    float: left;
+    width: 400px;
+    height: 800px;
+    background-repeat: no-repeat;
+}
+
+.light_content #laptop_preview {
+    /* float: left; */
+    width: 600px;
+    height: 400px;
+    background-repeat: no-repeat;
+    /* -webkit-mask-image: linear-gradient(to bottom, transparent 25%, black 75%);
+    mask-image: linear-gradient(to bottom, transparent 25%, black 75%); */
+    /* -webkit-mask-image: url("laptopscreenmask.png");
+    mask-image: url("laptopscreenmask.png");
+    -webkit-mask-size: 600px 400px;
+    mask-size: 600px 400px; */
+}
+
+.light_content #my_port{
+    float: right;
+    width: 400px;
+    padding: 15px 0;
+}
+
+.light_content #my_title{
+    color: rgb(62, 97, 155);
+    font-size: 50px;
+    text-align: center;
+}
+
+.light_content #my_port_time{
+    color: rgb(119, 120, 124);
+    font-size: 14px;
+    text-align: center;
+}
+
+.light_content #my_text{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    /* display: inline-block; */
+    text-align: justify;
+}
+
+/*dark*/
+.dark_content{
+    width: 100%;
+    background: rgb(26, 27, 29);
+}
+
+.dark_content #my_container{
+    width: 850px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.dark_content #my_container > div {
+    position: relative;
+}
+
+.dark_content #laptop_scroll {
+    float: left;
+    width: 600px;
+    height: 400px;
+    background-repeat: no-repeat;
+}
+
+.dark_content #phone_scroll {
+    float: left;
+    width: 400px;
+    height: 800px;
+    background-repeat: no-repeat;
+}
+
+/*button*/
+#buttons {
+    width: 100%;
+    text-align: center;
+}
+
+#buttons img {
+    border-radius: 10px;
+}
+
+#buttons a.image_link {
+    -webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	text-decoration:none;
+	opacity:0.8;
+	position: relative;
+    top: 0;
+}
+
+#buttons a.image_link:hover{
+    opacity: 1.0;
+    top: 5px;
 }
