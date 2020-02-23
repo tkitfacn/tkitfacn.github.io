@@ -1,5 +1,6 @@
 var laptopscrolls = document.querySelectorAll("#laptop_scroll");
 var phonescrolls = document.querySelectorAll("#phone_scroll");
+var tabletscrolls = document.querySelectorAll("#tablet_scroll");
 
 var render = function() {
     var scrolltop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
@@ -7,16 +8,27 @@ var render = function() {
 
     for(var i = 0; i < laptopscrolls.length; i++) {
         var layer = laptopscrolls[i];
-        var y = (scrolltop - layer.offsetTop) * 0.1;
+        var y = (scrolltop - layer.offsetTop) * 0.15;
         layer.style.backgroundPosition = "0px " + y + "px";
         laptopPreviewes[i].style.backgroundPosition = "0px " + y + "px";
         //console.log(y);
     }
-    scrolltop -= 140;
+
+    scrolltop -= 10;
+    for(var i = 0; i < tabletscrolls.length; i++) {
+        var layer = tabletscrolls[i];
+        var y = (scrolltop - layer.offsetTop) * 0.2;
+        layer.style.backgroundPosition = "0px " + y + "px";
+        tabletPreviewes[i].style.backgroundPosition = "0px " + y + "px";
+        //console.log(y);
+    }
+
+    scrolltop -= 90;
     for(var i = 0; i < phonescrolls.length; i++) {
         var layer = phonescrolls[i];
-        var y = (scrolltop - layer.offsetTop) * 0.5;
+        var y = (scrolltop - layer.offsetTop) * 0.6;
         layer.style.backgroundPosition = "0px " + y + "px";
+        phonePreviewes[i].style.backgroundPosition = "0px " + y + "px";
         //console.log(y);
     }
 };
@@ -29,17 +41,23 @@ setTimeout(function() {
     render();
 }, 50);
 
+var tabletPreviewes = document.querySelectorAll("#tablet_preview");
+var phonePreviewes = document.querySelectorAll("#phone_preview");
 var laptopPreviewes = document.querySelectorAll("#laptop_preview");
 var imageCount = 0;
 var updateImage = setInterval(function() {
-    if (haircreatorImages.length == imageCount) imageCount = 0;
-    else {
-        var layer = laptopPreviewes[0];
-        layer.style.backgroundImage = haircreatorImages[imageCount];
-        imageCount++;
-    }
-    //console.log(haircreatorImages[imageCount]);
+    var index = 0;
+
+    laptopPreviewes[index].style.backgroundImage = haircreatorImages[imageCount%haircreatorImages.length];
+    phonePreviewes[index].style.backgroundImage = funraceImages[imageCount%funraceImages.length];
+    tabletPreviewes[index].style.backgroundImage = bulletslayerImages[imageCount%bulletslayerImages.length];
+
+
+    imageCount++;
+    //console.log(imageCount%haircreatorImages.length);
 }, 3000);
 
 //HairCreator
 var haircreatorImages = ["url('media/images/content/haircreator/1.png')", "url('media/images/content/haircreator/2.png')", "url('media/images/content/haircreator/3.png')"];
+var funraceImages = ["url('media/images/content/funrace/1.png')", "url('media/images/content/funrace/2.png')"];
+var bulletslayerImages = ["url('media/images/content/bulletslayer/1.png')", "url('media/images/content/bulletslayer/2.png')", "url('media/images/content/bulletslayer/3.png')"];
