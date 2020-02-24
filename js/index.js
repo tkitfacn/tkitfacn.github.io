@@ -4,7 +4,7 @@ var tabletscrolls = document.querySelectorAll("#tablet_scroll");
 
 var render = function() {
     var scrolltop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-    var speed = document.documentElement.clientHeight / 1080;
+    var speed = 720 / document.documentElement.clientHeight;
     //console.log(windowHeight);
     scrolltop -= 20;
 

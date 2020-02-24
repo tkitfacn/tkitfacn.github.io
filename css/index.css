@@ -15,7 +15,7 @@
 
 body{
     margin: 0;
-    background: rgb(32, 32, 32); /*32 32 32*/
+    background: rgb(125, 154, 201); /*32 32 32*/
     border: none;
     font-family: 'Arsenal';
     color: rgb(252, 252, 252);
@@ -41,17 +41,22 @@ body blog-tagline {
 }
 
 #myContent {
-
+    width: 100%;
 }
 
  /*light*/
 .light_content{
-    width: 100%;
+    background: rgb(235, 234, 240);
+}
+
+.light_content #my_content {
     background: rgb(246, 246, 246);
+    width: 1000px;
+    margin: 0 auto;
 }
 
 .light_content #my_container{
-    width: 1000px;
+    width: 900px;
     height: 400px;
     overflow: hidden;
     margin: 0 auto;
@@ -62,21 +67,21 @@ body blog-tagline {
 }
 
 .light_content #laptop_scroll {
-    float: left;
+    float: right;
     width: 600px;
     height: 400px;
     background-repeat: no-repeat;
 }
 
 .light_content #phone_scroll {
-    float: left;
+    float: right;
     width: 400px;
     height: 800px;
     background-repeat: no-repeat;
 }
 
 .light_content #tablet_scroll {
-    float: left;
+    float: right;
     width: 450px;
     height: 450px;
     background-repeat: no-repeat;
@@ -108,8 +113,8 @@ body blog-tagline {
 }
 
 .light_content #my_port{
-    float: right;
-    width: 400px;
+    float: left;
+    width: 300px;
     padding: 30px 0;
 }
 
@@ -134,12 +139,17 @@ body blog-tagline {
 
 /*dark*/
 .dark_content{
-    width: 100%;
+    background: rgb(0, 0, 0);
+}
+
+.dark_content #my_content {
     background: rgb(26, 27, 29);
+    width: 1000px;
+    margin: 0 auto;
 }
 
 .dark_content #my_container{
-    width: 1000px;
+    width: 900px;
     height: 400px;
     overflow: hidden;
     margin: 0 auto;
@@ -190,7 +200,7 @@ body blog-tagline {
 
 .dark_content #my_port{
     float: left;
-    width: 400px;
+    width: 300px;
     padding: 30px 0;
 }
 
@@ -241,11 +251,23 @@ body blog-tagline {
     top: 15px;
 }
 
-#header{
-    background-color: rgb(60, 130, 241);
+#header_bg{
+    background-color: rgb(125, 154, 201);
+    
 }
+
+#header{
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(60, 130, 241);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 #header > div {
-    width: 1000px;
+    width: 85%;
     margin: 0 auto;
 }
 
