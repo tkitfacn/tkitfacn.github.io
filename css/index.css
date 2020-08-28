@@ -15,7 +15,8 @@
 
 body{
     margin: 0;
-    background: rgb(125, 154, 201); /*32 32 32*/
+    /* background: rgb(125, 154, 201);*/
+    background: rgb(29, 29, 29);
     border: none;
     font-family: 'Arsenal';
     color: rgb(252, 252, 252);
@@ -274,4 +275,17 @@ body blog-tagline {
 #header a {
     color: rgb(255, 255, 255);
     text-decoration: underline;
+}
+
+#menu {
+    height: 100%;
+    width: 250px;
+    background: rgb(125, 154, 201);
+    top: 0;
+    z-index: 2;
+    float: right;
+}
+#menu > div {
+    height: 100%;
+
 }

@@ -48,18 +48,40 @@ var phonePreviewes = document.querySelectorAll("#phone_preview");
 var laptopPreviewes = document.querySelectorAll("#laptop_preview");
 var imageCount = 0;
 var updateImage = setInterval(function() {
-    var index = 0;
+    
 
-    laptopPreviewes[index].style.backgroundImage = haircreatorImages[imageCount%haircreatorImages.length];
-    phonePreviewes[index].style.backgroundImage = funraceImages[imageCount%funraceImages.length];
-    tabletPreviewes[index].style.backgroundImage = bulletslayerImages[imageCount%bulletslayerImages.length];
+    backgroundLoop();
 
 
     imageCount++;
     //console.log(imageCount%haircreatorImages.length);
 }, 3000);
 
+
+
 //HairCreator
 var haircreatorImages = ["url('media/images/content/haircreator/1.png')", "url('media/images/content/haircreator/2.png')", "url('media/images/content/haircreator/3.png')"];
 var funraceImages = ["url('media/images/content/funrace/1.png')", "url('media/images/content/funrace/2.png')"];
 var bulletslayerImages = ["url('media/images/content/bulletslayer/1.png')", "url('media/images/content/bulletslayer/2.png')", "url('media/images/content/bulletslayer/3.png')"];
+
+
+var backgroundLoop = function() {
+    timeUpdateBGColor = 1;
+    var index = 0;
+    laptopPreviewes[index].style.backgroundImage = haircreatorImages[imageCount%haircreatorImages.length];
+    phonePreviewes[index].style.backgroundImage = funraceImages[imageCount%funraceImages.length];
+    tabletPreviewes[index].style.backgroundImage = bulletslayerImages[imageCount%bulletslayerImages.length];
+}
+
+var timeUpdateBGColor = 0.0;
+var updateBGColor = setInterval(function() {
+    if (timeUpdateBGColor > 0) {
+        timeUpdateBGColor -= 0.05;
+        var c = 255* timeUpdateBGColor;
+        var white = "rgba(246, 246, 246," + timeUpdateBGColor + ")";
+        var dark = "rgba(26, 27, 29," + timeUpdateBGColor + ")";
+        //laptopPreviewes[0].style.backgroundColor = white;
+        phonePreviewes[0].style.backgroundColor = dark;
+        //tabletPreviewes[0].style.backgroundColor = white;
+    }
+}, 100);
