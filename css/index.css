@@ -14,7 +14,8 @@
 }
 
 body{
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
     /* background: rgb(125, 154, 201);*/
     background: rgb(29, 29, 29);
     border: none;
@@ -277,15 +278,40 @@ body blog-tagline {
     text-decoration: underline;
 }
 
-#menu {
+#sidebar {
+    position: fixed;
+    width: 200px;
     height: 100%;
-    width: 250px;
-    background: rgb(125, 154, 201);
-    top: 0;
+    background: rgb(29, 29, 29);
+    right: -200px;
     z-index: 2;
-    float: right;
 }
-#menu > div {
-    height: 100%;
 
+#sidebar.active {
+    right: 0;
+}
+
+#sidebar ul li {
+    color: rgb(235, 234, 240);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+}
+
+#sidebar .btn-side {
+    position: absolute;
+    right: 240px;
+    top: 5px;
+}
+
+#sidebar.active .btn-side {
+    right: 160px;
+}
+
+#sidebar .btn-side span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: white;
+    margin: 5px 0px;
 }
