@@ -35,7 +35,8 @@ body blog-tagline {
 }
 
 #myVideo {
-    position: absolute;
+    /* top: 0px; */
+    /* position: absolute; */
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -267,6 +268,9 @@ body blog-tagline {
     top: 0;
     z-index: 1;
 }
+#header.blur{
+    filter:blur(3px);
+}
 
 #header > div {
     width: 85%;
@@ -278,12 +282,32 @@ body blog-tagline {
     text-decoration: underline;
 }
 
+#header .btn-side {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+/* #header.active .btn-side {
+    right: 200px;
+} */
+
+#header .btn-side span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: white;
+    margin: 5px 0px;
+}
+
+
+
 #sidebar {
     position: fixed;
-    width: 200px;
+    width: 300px;
     height: 100%;
     background: rgb(29, 29, 29);
-    right: -200px;
+    right: -300px;
     z-index: 2;
 }
 
@@ -298,7 +322,7 @@ body blog-tagline {
     border-bottom: 1px solid rgba(100, 100, 100, 0.3);
 }
 
-#sidebar .btn-side {
+/* #sidebar .btn-side {
     position: absolute;
     right: 240px;
     top: 5px;
@@ -306,6 +330,12 @@ body blog-tagline {
 
 #sidebar.active .btn-side {
     right: 160px;
+} */
+
+#sidebar .btn-side {
+    position: absolute;
+    right: 260px;
+    top: 10px;
 }
 
 #sidebar .btn-side span {
@@ -314,4 +344,32 @@ body blog-tagline {
     height: 5px;
     background: white;
     margin: 5px 0px;
+}
+
+#main.blur {
+    filter:blur(3px);
+}
+
+#content {
+    width: 100%;
+    z-index: 0;
+}
+
+ /*light*/
+#content.light{
+    background: rgb(235, 234, 240);
+}
+
+#content.light #my_content {
+    background: rgb(246, 246, 246);
+    /* width: 1000px; */
+    width: min(100%, 1000px);
+    margin: 0 auto;
+}
+
+#content.light #my_container{
+    /* width: 900px; */
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
 }
