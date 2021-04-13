@@ -56,6 +56,7 @@ body blog-tagline {
     background: rgb(246, 246, 246);
     width: 1000px;
     margin: 0 auto;
+    box-shadow: 5px 10px 10px rgb(175, 175, 175);
 }
 
 .light_content #my_container{
@@ -149,6 +150,7 @@ body blog-tagline {
     background: rgb(26, 27, 29);
     width: 1000px;
     margin: 0 auto;
+    box-shadow: 5px 10px 10px rgb(24, 24, 24);
 }
 
 .dark_content #my_container{
@@ -372,4 +374,26 @@ body blog-tagline {
     height: 400px;
     overflow: hidden;
     margin: 0 auto;
+}
+
+#appline {
+    width: 100%;
+    height: 15px;
+    background: rgb(125, 154, 201);
+}
+
+#bottom {
+    width: 100%;
+    height: 200px;
+    background: rgb(26, 27, 29);
+}
+
+#bottom #textlink {
+    color:rgb(252, 252, 252);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
